@@ -1,0 +1,380 @@
+<html>
+	<head>
+		<title>Code.Edu - Arrays</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/application.css">
+		<link rel="icon" type="image/ico"  href="favicon.ico">
+	</head>
+	<body>
+		<div class="container">
+			<div class="navbar navbar-fixed-top">
+  				<div class="navbar-inner">
+    				<div class="container">
+    					<div>
+    						<a href="index.html" class="brand">Code.Edu</a>
+    					</div>
+    					<ul class="nav">
+    						<li><a href="lesson1.html">Lesson 1</a></li>
+    						<li><a href="lesson2.html">Lesson 2</a></li>
+    						<li><a href="lesson3.html">Lesson 3</a></li>
+    						<li><a href="lesson4.html">Lesson 4</a></li>
+    						<li class="active"><a href="lesson5.html">Lesson 5</a></li>
+    						<li><a href="advanced.html">Advanced Topics</a></li>
+    					</ul>
+    					<ul class="nav pull-right">
+    						<li class="divider-vertical"></li>
+    						<li><a href="sandbox.html">Sandbox</a></li>
+    						<li><a href="about.html">About</a></li>
+    					</ul>
+    				</div>
+				</div>
+			</div>
+			<pre id="next_lesson" class="solution">advanced.html</pre>
+			<div class="content">
+				<div class="main-page-header">
+					<h1>Lesson 5: Arrays</h1>
+				</div>
+				<div class="row">
+					<div class="span7">
+						<h3>Material</h3>
+						When programming arrays are basically variables which can hold multiple values. An <a class="term-bottom" rel="popover" data-content="In computer science, an array data structure or simply array is a data structure consisting of a collection of elements (values or variables), each identified by at least one array index or key." data-original-title="Array">array</a> can be used to store multiple numbers or strings which have some kind of relationship.  The different elements inside an array can be accessed by using an index, which represents the value's position inside the array.  This way, a collection of values can be stored and manipulated similarly to variables, while maintaining the structure.
+						<hr>
+						<div id="console" class="well console_inactive"></div>
+						<div>
+							<ul class="rlo_pager">
+								<li class="previous">
+									<a class="btn btn-large btn-primary rlo_pager_button_width" href="lesson4.html"> 
+										<i class="icon-chevron-left icon-white" style="float:left;"></i> 
+										Previous Lesson 
+									</a>
+								</li>
+								<li>
+									<a class="btn" data-toggle="modal" href="#consoleHelp"><i class="icon-info-sign"></i> Console Help</a>
+								</li>
+								<li class="next">
+									<a class="btn btn-large btn-primary rlo_pager_button_width" href="advanced.html"> 
+										Advanced Topics
+										<i class="icon-chevron-right icon-white" style="float:right;"></i> 
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="span5">
+						<div id="lessons" class="accordion">
+						   <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title1" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 1: Defining Arrays
+				                </span>
+				              </div>
+				              <div id="1" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  	Arrays have the same require the same <a class="tip" rel="tooltip" title="Variable names are case sensitive so x and X would be two separate variables.  Names must also start with a character or '_'">naming conventions</a> as variables.  But how do we define multiple values in the same variable?  Well we use square-brackets and and separate the values by commas.
+				                  </p>
+				                  <p>
+				                  	Arrays can be defined as:
+				                  	<br>
+				                  	<code>myArray = [<em>val1</em>,<em>val2</em>,<em>val3</em>,...]</code>
+				                  </p>
+				                  <p>
+				                  	<span class="label label-important">Action</span> In the console <strong>create an array with four numbers</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint1">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint1" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  			<code>myArray = [2,4,6,8]</code>
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer1_enter" class="solution">^\s*[a-zA-Z_][a-zA-Z_0-9]*\s*=\s*\[[0-9]+,\s*[0-9]+,\s*[0-9]+,\s*[0-9]+\]</pre>
+				                <pre id="answer1_out" class="solution">object</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title2" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 2: Indexes
+				                </span>
+				              </div>
+				              <div id="2" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  	To access the data stored in arrays you need to use an <a class="term-bottom" rel="popover" data-content="In computer science, array index is an integer pointer (into an array data structure) that identifies an element of the array." data-original-title="Index">index</a> with your array.  Array indexes start at 0 and go up to one less then the total number of values in the array.  Since we created an array with four numbers, our indexes would be 0-3.
+				                  </p>
+				                  <p>
+				                  	Indexes can be used like <code>myArray[index]</code>.  We use the [] to let the variable know that we want to use the value at the position defined inside the brackets.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>access one of the values from your array</strong>.
+				                  </p>
+  				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint2">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint2" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>myArray[2]</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer2_enter" class="solution">^\s*[a-zA-Z_][a-zA-Z_0-9]*\[[0-9]+\]</pre>
+				                <pre id="answer2_out" class="solution">number</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title3" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 3: Using Array Values
+				                </span>
+				              </div>
+				              <div id="3" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  	Once we can access values in arrays they can be used just like any other variable.  Since our array contains numbers we can use any number operations on the elements of the array.  If the array contained strings we could use the string functions.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>add two array values together</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint3">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint3" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>myArray[2] + myArray[1]</code>
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer3_enter" class="solution">^\s*[a-zA-Z_][a-zA-Z_0-9]*\[[0-9]+\]\s*\+\s*[a-zA-Z_][a-zA-Z_0-9]*\[[0-9]+\]</pre>
+				                <pre id="answer3_out" class="solution">number</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title4" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 4: Array Assignment
+				                </span>
+				              </div>
+				              <div id="4" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  When changing the values inside an array you have to ensure that you use an index to change a specific value in the array. This is done as <code>myArray[<em>index</em>] = <em>newVal</em></code>.
+				                  </p>
+				                  <p>
+				                  If an index isn't used like <code>myArray = <em>value</em></code> you will lose the entire array, and will only be able to reference the <em>value</em> like a normal variable.  This can be used to overwrite an array with new values if you use the array definition from part 1.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>overwrite one of the values in your array</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint4">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint4" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>myArray[2] = 3</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer4_enter" class="solution">^\s*[a-zA-Z_][a-zA-Z_0-9]*\[[0-9]+\]\s*=\s*(?:-[0-9]+|[0-9]+)</pre>
+				                <pre id="answer4_out" class="solution">number</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title5" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 5: Array Length
+				                </span>
+				              </div>
+				              <div id="5" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  Like with strings arrays also have a <code>.length</code> property, which returns how many values are contained within the array.
+				                  </p>
+				                  <p>
+				                  	<span class="label label-info">Note</span> this is extremely useful to get the last value of the array.  You can easily access it with <code>myArray[myArray.length - 1]</code>.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>get the length of your array</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint5">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint5" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>myArray.length</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				               	<pre id="answer5_enter" class="solution">^\s*[a-zA-Z_][a-zA-Z_0-9]*\.length</pre>
+				                <pre id="answer5_out" class="solution">number</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title6" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 6: Adding More Values 
+				                </span>
+				              </div>
+				              <div id="6" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  	It is easy to add values to your array and make it longer.  All you need to do is select an index larger then your current array and assign a value to it.  The easiset way to add on to the end of your array is to use <code>.length</code> as the index, since it will return a value one larger then your largest index.
+			                  	  </p>
+			                  	  <p>
+				              		<span class="label label-info">Note</span> If you have an array with 50 values, you will have to use indexes 0-49 to access those values.  Then if you decide to add a new value at index 100, you will have indexes 50-99 with no values.  That could make keeping track of your data extremely difficult.
+				                  </p>
+				                  <p>
+				                  	<span class="label label-important">Action</span> In the console <strong>add a value to the end of your array using <code>.length</code></strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint6">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint6" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  		<code>myArray[myArray.length] = 10</code> 
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer6_enter" class="solution">^\s*[a-zA-Z_][a-zA-Z_0-9]*\[\s*[a-zA-Z_][a-zA-Z_0-9]*\.length\]\s*=\s*(?:-[0-9]+|[0-9]+)</pre>
+				                <pre id="answer6_out" class="solution">number</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title7" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 7: Multidimensional Arrays
+				                </span>
+				              </div>
+				              <div id="7" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  Multidimensional arrays can be a confusing concept, but we mostly know how to work with them already!  If we create a new array with arrays as the values, then we can have what is called a two dimensional array. The syntax for this is <code>myArray = [[<em>val1, val2, val3,...</em>],[<em>val1, val2, val3,...</em>],...]</code>
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>create an array which contains two arrays of four numbers</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint7">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint7" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  			<code>my2dArray = [[2,4,6,8],[9,8,7,6]]</code> 
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer7_enter" class="solution">^\s*[a-zA-Z_][a-zA-Z_0-9]*\s*=\s*\[\s*\[(?:-[0-9]+|[0-9]+),\s*(?:-[0-9]+|[0-9]+),\s*(?:-[0-9]+|[0-9]+),\s*(?:-[0-9]+|[0-9]+)\s*]\s*,\s*\[(?:-[0-9]+|[0-9]+),\s*(?:-[0-9]+|[0-9]+),\s*(?:-[0-9]+|[0-9]+),\s*(?:-[0-9]+|[0-9]+)\s*]\]</pre>
+				                <pre id="answer7_out" class="solution">object</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title8" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 8: Accessing Values in Multidimensional Arrays
+				                </span>
+				              </div>
+				              <div id="8" class="accordion-body collapse">
+				                <div id="last_inner" class="accordion-inner">
+				                  <p>
+				                  Before we used indexes to access values in an array, well that is still the case.  The only trick now is that an index will retrieve our array, then we need a second index to retrive the values from that array.  This is easily done by <code>myArray[<em>index1</em>][<em>index2</em>]</code>
+				                  </p>
+				                  <p>
+				                  <span class="label label-info">Note</span> we can use this same method to create arrays with <em>many</em> more dimensions then two, and they all can be accessed by adding more indexes.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>retrieve a value from the two dimensional array</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint8">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint8" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  			<code>my2dArray[0][2]</code> 
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer8_enter" class="solution">^\s*[a-zA-Z_][a-zA-Z_0-9]*\[[01]+\]\s*\[[0-3]+\]</pre>
+				                <pre id="answer8_out" class="solution">number</pre>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="footer">
+    		<p class="center_p"> &copy; Garrett Speager 2012 </p>
+  		</div>
+  		<div class="modal hide" id="consoleHelp">
+  			<div class="modal-header">
+  			  	<a class="close" data-dismiss="modal">&times;</a>
+  			  	<h3>How to Use the Console</h3>
+  			</div>
+  			<div class="modal-body console_help_body">
+  			  	<h4>Enable the Console</h4>
+  			  	<p>
+  			  		To enable the console you must first click on the grey console area.  You can tell that the console is enabled when the border around it gets darker and thicker.  The cursor and line input marker will also get darker to let you know you can type.
+  			  	</p>
+  			  	<p>
+  			  		<span class="label label-info">Note</span> clicking outside the console will disable it.
+  			  	</p>
+  			  	<h4>Using the console</h4>
+  			  	<p>
+  			  		Once the console is enabled you will be able to type into the input line.  This allows you to enter commands and have them processed. If your command is executed successfully the result will:
+  			  		<div class="alert alert-info">
+						>> look like this
+					</div>
+					If your input results in an error it will:
+					<div class="alert alert-danger">
+						look like this
+					</div>
+				</p>
+				<h4>Special Keys</h4>
+  			  	<p>
+  			  		While the console will register most character keys there are a few keys that perform special actions.
+  			  		<ul>
+  			  			<li><span class="label">Enter</span> submits the current input line</li>
+  			  			<li><span class="label">Backspace</span> deletes the character to the left of the cursor</li>
+  			  			<li><span class="label">Delete</span> deletes the character in the cursor</li>
+  			  			<li><span class="label">Left Arrow</span> moves the cursor one character to the left</li>
+  			  			<li><span class="label">Right Arrow</span> moves the cursor one character to the right</li>
+  			  			<li><span class="label">Up Arrow</span> cycles backwards through previously used commands</li>
+  			  			<li><span class="label">Down Arrow</span> cycles forward through previously used commands</li>
+  			  		<ul>
+				</p>
+  			</div>
+  			<div class="modal-footer">
+  			  	<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+  			</div>
+		</div>
+	</body>
+	<script src="javascript/jquery-1.7.min.js" type="text/javascript"></script>
+	<script src="javascript/bootstrap.min.js" type="text/javascript"></script>
+	<script src="javascript/application.js" type="text/javascript"></script>
+</html>

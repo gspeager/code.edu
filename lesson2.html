@@ -1,0 +1,367 @@
+<html>
+	<head>
+		<title>Code.Edu - Strings</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/application.css">
+		<link rel="icon" type="image/ico"  href="favicon.ico">
+	</head>
+	<body>
+		<div class="container">
+			<div class="navbar navbar-fixed-top">
+  				<div class="navbar-inner">
+    				<div class="container">
+    					<div>
+    						<a href="index.html" class="brand">Code.Edu</a>
+    					</div>
+    					<ul class="nav">
+    						<li><a href="lesson1.html">Lesson 1</a></li>
+    						<li class="active"><a href="lesson2.html">Lesson 2</a></li>
+    						<li><a href="lesson3.html">Lesson 3</a></li>
+    						<li><a href="lesson4.html">Lesson 4</a></li>
+    						<li><a href="lesson5.html">Lesson 5</a></li>
+    						<li><a href="advanced.html">Advanced Topics</a></li>
+    					</ul>
+    					<ul class="nav pull-right">
+    						<li class="divider-vertical"></li>
+    						<li><a href="sandbox.html">Sandbox</a></li>
+    						<li><a href="about.html">About</a></li>
+    					</ul>
+    				</div>
+				</div>
+			</div>
+			<pre id="next_lesson" class="solution">lesson3.html</pre>
+			<div class="content">
+				<div class="main-page-header">
+					<h1>Lesson 2: Strings</h1>
+				</div>
+				<div class="row">
+					<div class="span7">
+						<h3>Material</h3>
+						Strings are made up of characters and are usually used to display text.  An example of a string is 'Hello World'.  <a class="term-bottom" rel="popover" data-content="In computer science, a string is a group of characters that can be treated as a unit by a computer program" data-original-title="String">Strings</a> are also extremely important to understand because they represent text and being able to manipulate text can be invaluable.  There are many different ways to get information from strings and modify them to suit your uses.
+						<hr>
+						<div id="console" class="well console_inactive"></div>
+						<div>
+							<ul class="rlo_pager">
+								<li class="previous">
+									<a class="btn btn-large btn-primary rlo_pager_button_width" href="lesson1.html"> 
+										<i class="icon-chevron-left icon-white" style="float:left;"></i> 
+										Previous Lesson 
+									</a>
+								</li>
+								<li>
+									<a class="btn" data-toggle="modal" href="#consoleHelp"><i class="icon-info-sign"></i> Console Help</a>
+								</li>
+								<li class="next">
+									<a class="btn btn-large btn-primary rlo_pager_button_width" href="lesson3.html"> 
+										Next Lesson 
+										<i class="icon-chevron-right icon-white" style="float:right;"></i> 
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="span5">
+						<div id="lessons" class="accordion">
+						   <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title1" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 1: Characters
+				                </span>
+				              </div>
+				              <div id="1" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  A string is made up of characters.  Characters can be simple letters from the alphabet such as <code>c</code> or can be specialized characters like <code>#</code>.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>type some characters</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint1">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint1" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  			<code>Hello World</code>
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer1_enter" class="solution">.+</pre>
+				                <pre id="answer1_out" class="solution">undefined</pre>
+				              </div>
+				            </div>
+
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title2" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 2: String Format
+				                </span>
+				              </div>
+				              <div id="2" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  You'll notice that the console didn't like characters by themselves.  For a string to be recognized, you must surround your characters with either <code>"</code> or <code>'</code>.
+				                  </p>
+				                  <p>
+				                  You can not mix and match the quotation marks so if you start your string with a <code>"</code> make sure you end it, with the same one.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>enter a string</strong>.
+				                  </p>
+  				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint2">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint2" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>"Hello World"</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer2_enter" class="solution">["'].+["']</pre>
+				                <pre id="answer2_out" class="solution">string</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title3" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 3: String Concatenation
+				                </span>
+				              </div>
+				              <div id="3" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  Now that you understand what a string is, there are many things you can do with it.  Concatenation is one of the most common operations performed with strings.  Concatenation combines two strings together with the <code>+</code> operator.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>try and concatenate two strings together</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint3">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint3" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>"Hello" + " World"</code>
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer3_enter" class="solution">\+</pre>
+				                <pre id="answer3_out" class="solution">string</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title4" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 4: Length
+				                </span>
+				              </div>
+				              <div id="4" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  Sometimes it is extremely important to know how long a string is.  It can allow us to perform operations using each character if we need to.  Using <code>.length</code> immediately after the string we can easily figure out how long a string is.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>get the length of your name</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint4">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint4" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>"Hello World".length</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer4_enter" class="solution">["'].+["'].length</pre>
+				                <pre id="answer4_out" class="solution">number</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title5" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 5: Uppercase and Lowercase
+				                </span>
+				              </div>
+				              <div id="5" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  Now we can get into string <a class="term-top" rel="popover" data-content="In computer science, a function (also called procedure, method, subroutine, or routine) is a portion of code within a larger program that performs a specific task and is relatively independent of the remaining code." data-original-title="Function">functions</a>. There are many useful string functions to manipulate strings in different ways.  Two in particular are <code>.toUpperCase()</code> and <code>.toLowerCase()</code>.  As you can probably guess, these will convert all the characters in a string to uppercase or lowercase depending on which you choose.  You also notice that unlike <code>.length</code> these functions end with brackets, you must include those for it to work.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>try using one of the case functions with a string</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint5">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint5" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>"Hello World".toUpperCase()</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				               	<pre id="answer5_enter" class="solution">["'].+["'].toUpperCase\(\)|["'].+["'].toLowerCase\(\)</pre>
+				                <pre id="answer5_out" class="solution">string</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title6" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 6: Replace
+				                </span>
+				              </div>
+				              <div id="6" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  Another useful function is <code>.replace()</code>.  It takes two <a class="term-top" rel="popover" data-content="In computer science, a reference or value that is passed to a function, procedure, subroutine, command, or program." data-original-title="Parameter">parameters</a>.  In this case you can use it as <code>.replace("string to replace", "string to replace it with")</code>.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>use replace to modify a string</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint6">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint6" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  		<code>"Hello World".replace(" ", "_")</code> 
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer6_enter" class="solution">["'].+["'].replace\(.+\)</pre>
+				                <pre id="answer6_out" class="solution">string</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title7" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 7: IndexOf
+				                </span>
+				              </div>
+				              <div id="7" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  A simpler string function is <code>.indexOf()</code>.  This function takes a single string parameter and returns the position of the first found occurrence of the parameter in the string.  Alternatively you can also use <code>.lastIndexOf()</code> to get the last occurrence of a string.
+				                  </p>
+      				              <p>
+				                  <span class="label label-info">Note</span> In programming, most structures start at position 0, so if you used <code>.indexOf()</code> with the first character in the string, it would return location 0 and the second character would return 1.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>use either of these functions to get the position of a character</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint7">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint7" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  			<code>"Hello World".indexOf("o")</code> 
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer7_enter" class="solution">["'].+["'].indexOf\(.+\)|["'].+["'].lastIndexOf\(.+\)</pre>
+				                <pre id="answer7_out" class="solution">number</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title8" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 8: Substrings
+				                </span>
+				              </div>
+				              <div id="8" class="accordion-body collapse">
+				                <div id="last_inner" class="accordion-inner">
+				                  <p>
+				                  Finally, one of the most useful functions to use with strings is <code>.substr()</code>.  It takes two <a class="tip" rel="tooltip" title="remember numbers do not require quotation marks">numbers</a> as parameters.  The first is the start postion and the second is how many characters to extract.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>extract a substring from a string</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint8">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint8" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  			<code>"Hello World".substr(1,4)</code> 
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer8_enter" class="solution">["'].+["'].substr\(.+\)</pre>
+				                <pre id="answer8_out" class="solution">string</pre>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="footer">
+    		<p class="center_p"> &copy; Garrett Speager 2012 </p>
+  		</div>
+  		<div class="modal hide" id="consoleHelp">
+  			<div class="modal-header">
+  			  	<a class="close" data-dismiss="modal">&times;</a>
+  			  	<h3>How to Use the Console</h3>
+  			</div>
+  			<div class="modal-body console_help_body">
+  			  	<h4>Enable the Console</h4>
+  			  	<p>
+  			  		To enable the console you must first click on the grey console area.  You can tell that the console is enabled when the border around it gets darker and thicker.  The cursor and line input marker will also get darker to let you know you can type.
+  			  	</p>
+  			  	<p>
+  			  		<span class="label label-info">Note</span> clicking outside the console will disable it.
+  			  	</p>
+  			  	<h4>Using the console</h4>
+  			  	<p>
+  			  		Once the console is enabled you will be able to type into the input line.  This allows you to enter commands and have them processed. If your command is executed successfully the result will:
+  			  		<div class="alert alert-info">
+						>> look like this
+					</div>
+					If your input results in an error it will:
+					<div class="alert alert-danger">
+						look like this
+					</div>
+				</p>
+				<h4>Special Keys</h4>
+  			  	<p>
+  			  		While the console will register most character keys there are a few keys that perform special actions.
+  			  		<ul>
+  			  			<li><span class="label">Enter</span> submits the current input line</li>
+  			  			<li><span class="label">Backspace</span> deletes the character to the left of the cursor</li>
+  			  			<li><span class="label">Delete</span> deletes the character in the cursor</li>
+  			  			<li><span class="label">Left Arrow</span> moves the cursor one character to the left</li>
+  			  			<li><span class="label">Right Arrow</span> moves the cursor one character to the right</li>
+  			  			<li><span class="label">Up Arrow</span> cycles backwards through previously used commands</li>
+  			  			<li><span class="label">Down Arrow</span> cycles forward through previously used commands</li>
+  			  		<ul>
+				</p>
+  			</div>
+  			<div class="modal-footer">
+  			  	<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+  			</div>
+		</div>
+	</body>
+	<script src="javascript/jquery-1.7.min.js" type="text/javascript"></script>
+	<script src="javascript/bootstrap.min.js" type="text/javascript"></script>
+	<script src="javascript/application.js" type="text/javascript"></script>
+</html>

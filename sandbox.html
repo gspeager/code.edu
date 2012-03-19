@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>Code.Edu - Sandbox</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/application.css">
+		<link rel="icon" type="image/ico"  href="favicon.ico">
+	</head>
+	<body>
+		<div class="container">
+			<div class="navbar navbar-fixed-top">
+  				<div class="navbar-inner">
+    				<div class="container">
+    					<div>
+    						<a href="index.html" class="brand">Code.Edu</a>
+    					</div>
+    					<ul class="nav">
+    						<li><a href="lesson1.html">Lesson 1</a></li>
+    						<li><a href="lesson2.html">Lesson 2</a></li>
+    						<li><a href="lesson3.html">Lesson 3</a></li>
+    						<li><a href="lesson4.html">Lesson 4</a></li>
+    						<li><a href="lesson5.html">Lesson 5</a></li>
+    						<li><a href="advanced.html">Advanced Topics</a></li>
+    					</ul>
+    					<ul class="nav pull-right">
+    						<li class="divider-vertical"></li>
+    						<li class="active"><a href="sandbox.html">Sandbox</a></li>
+    						<li><a href="about.html">About</a></li>
+    					</ul>
+    				</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="main-page-header">
+					<h1>Sandbox</h1>
+				</div>
+				<div class="row">
+					<div class="span7">
+						<div id="console" class="well console_inactive"></div>
+					</div>
+					<div class="span5">
+						<div class="page-header">
+							<h3>
+								Coding Sandbox
+							</h3>
+						</div>
+						<p>
+							Feel free to code here without having to worry about completing lesson objectives.  Try any of the things you have learned in the lessons or play around with some new things.
+						</p>
+						<p>
+							If you want something new to try, enter: 
+						</p>
+						<p>
+							<code>alert("<em>your string here</em>")</code>
+						</p>
+						<p>
+							or
+						</p>
+						<p>
+							<code>confirm("<em>your string here</em>")</code>
+						</p>
+						<p>
+							<a class="btn" data-toggle="modal" href="#consoleHelp"><i class="icon-info-sign"></i> Console Help</a>
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>	
+		<div class="footer">
+    		<p class="center_p"> &copy; Garrett Speager 2012 </p>
+  		</div>
+  		<div class="modal hide" id="consoleHelp">
+  			<div class="modal-header">
+  			  	<a class="close" data-dismiss="modal">&times;</a>
+  			  	<h3>How to Use the Console</h3>
+  			</div>
+  			<div class="modal-body console_help_body">
+  			  	<h4>Enable the Console</h4>
+  			  	<p>
+  			  		To enable the console you must first click on the grey console area.  You can tell that the console is enabled when the border around it gets darker and thicker.  The cursor and line input marker will also get darker to let you know you can type.
+  			  	</p>
+  			  	<p>
+  			  		<span class="label label-info">Note</span> clicking outside the console will disable it.
+  			  	</p>
+  			  	<h4>Using the console</h4>
+  			  	<p>
+  			  		Once the console is enabled you will be able to type into the input line.  This allows you to enter commands and have them processed. If your command is executed successfully the result will:
+  			  		<div class="alert alert-info">
+						>> look like this
+					</div>
+					If your input results in an error it will:
+					<div class="alert alert-danger">
+						look like this
+					</div>
+				</p>
+				<h4>Special Keys</h4>
+  			  	<p>
+  			  		While the console will register most character keys there are a few keys that perform special actions.
+  			  		<ul>
+  			  			<li><span class="label">Enter</span> submits the current input line</li>
+  			  			<li><span class="label">Backspace</span> deletes the character to the left of the cursor</li>
+  			  			<li><span class="label">Delete</span> deletes the character in the cursor</li>
+  			  			<li><span class="label">Left Arrow</span> moves the cursor one character to the left</li>
+  			  			<li><span class="label">Right Arrow</span> moves the cursor one character to the right</li>
+  			  			<li><span class="label">Up Arrow</span> cycles backwards through previously used commands</li>
+  			  			<li><span class="label">Down Arrow</span> cycles forward through previously used commands</li>
+  			  		<ul>
+				</p>
+  			</div>
+  			<div class="modal-footer">
+  			  	<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+  			</div>
+		</div>
+	</body>
+	<script src="javascript/jquery-1.7.min.js" type="text/javascript"></script>
+	<script src="javascript/bootstrap.min.js" type="text/javascript"></script>
+	<script src="javascript/application.js" type="text/javascript"></script>
+</html>

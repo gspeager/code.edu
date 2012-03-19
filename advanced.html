@@ -1,0 +1,429 @@
+<html>
+	<head>
+		<title>Code.Edu - Advanced Topics</title>
+		<link rel="stylesheet" href="plugins/google-code-prettify/src/prettify.css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/application.css">
+		<link rel="icon" type="image/ico"  href="favicon.ico">
+	</head>
+	<body onload="prettyPrint()" data-spy="scroll">
+		<div class="container">
+			<div class="navbar navbar-fixed-top">
+  				<div class="navbar-inner">
+    				<div class="container">
+    					<div>
+    						<a href="index.html" class="brand">Code.Edu</a>
+    					</div>
+    					<ul class="nav">
+    						<li><a href="lesson1.html">Lesson 1</a></li>
+    						<li><a href="lesson2.html">Lesson 2</a></li>
+    						<li><a href="lesson3.html">Lesson 3</a></li>
+    						<li><a href="lesson4.html">Lesson 4</a></li>
+    						<li><a href="lesson5.html">Lesson 5</a></li>
+    						<li class="active"><a href="advanced.html">Advanced Topics</a></li>
+    					</ul>
+    					<ul class="nav pull-right">
+    						<li class="divider-vertical"></li>
+    						<li><a href="sandbox.html">Sandbox</a></li>
+    						<li><a href="about.html">About</a></li>
+    					</ul>
+    				</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="main-page-header">
+					<h1>Advanced Topics</h1>
+				</div>
+
+				<div class="subnav" data-spy="scroll">
+					<div class="container">
+						<ul id="subnav" class="nav nav-pills">
+							<li>
+								<a href="#advanced_topics">Advanced Topics</a>
+							</li>
+							<li>
+								<a href="#conditionals">Conditionals</a>
+							</li>
+							<li>
+								<a href="#loops">Loops</a>
+							</li>
+							<li>
+								<a href="#associative_arrays">Associative Arrays</a>
+							</li>
+							<li>
+								<a href="#functions">Functions</a>
+							</li>
+							<li>
+								<a href="#classes">Classes</a>
+							</li>
+							<li>
+								<a href="#moreinfo">More Information</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<section id="advanced_topics">
+					<div class="page-header">
+						<h1>
+						All Topics
+						</h1>
+					</div>
+					<p>
+					In the advaced topics we introduce five different programming concepts.  Conditionals, Loops, Associative Arrays, Functions, and Classes are all explored on this page.  Although we just cover the basics of these topics, we also point users to where they can find some more information.
+					</p>
+					<hr>
+				<div class="row">
+				    <div class="span4">
+				      <h3>
+				          <a href="#conditionals">Conditionals</a>
+				      </h3>
+				      <p>
+				      Conditional statements are features of a programming language which perform different computations or actions depending on whether a programmer-specified boolean condition evaluates to true or false
+				      </p>
+				    </div>
+				    <div class="span4">
+				      <h3>
+				         <a href="#loops">Loops</a>
+				      </h3>
+				      <p>
+				          A loop is a sequence of statements which is specified once but which may be carried out several times in succession. The code "inside" the loop is obeyed a specified number of times, or once for each of a collection of items, until some condition is met, or indefinitely.
+				      </p>
+				    </div>
+				    <div class="span4">
+				      <h3>
+				          <a href="#associative_arrays">Associative Arrays</a>
+				      </h3>
+				      <p>
+				          Are an abstract data type composed of a collection of (key,value) pairs, such that each possible key appears at most once in the collection.
+				      </p>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="span4">
+				      <h3>
+				          <a href="#functions">Functions</a>
+				      </h3>
+				      <p>
+				      	A named section of a program that performs a specific task.
+				      </p>
+				    </div>
+				    <div class="span4">
+				      <h3>
+				          <a href="#classes">Classes</a>
+				      </h3>
+				      <p>
+				          Are a construct that is used as a blueprint to create instances of itself – referred to as class instances, class objects, instance objects or simply objects. A class defines constituent members which enable these class instances to have state and behavior. 
+				      </p>
+				    </div>
+				    <div class="span4">
+				      <h3>
+				          <a href="#moreinfo">More Information</a>
+				      </h3>
+				      <p>
+				          Where to find more information to continue learning about programming and javascript.
+				      </p>
+				    </div>
+				</div>
+				</section>
+				<section id="conditionals">
+					<div class="page-header">
+						<h1>
+						Conditionals
+						</h1>
+					</div>
+					<p>
+					Often when writing code you will want to change the behaviour of the program based on values from inputs and calculations.  This can be accomplished by using <a class="tip" rel="tooltip" title="See lesson 3 for more information">comparison operators</a> with conditional statements.  We the different types of conditional statements are:
+						<ul>
+							<li>
+								<strong>if statement</strong> - use this statement to execute some code only if a specified condition is true
+							</li>
+							<li>
+								<strong>if...else statement</strong> - use this statement to execute some code if the condition is true and another code if the condition is false
+							</li>
+							<li>
+								<strong>if...else if....else statement</strong> - use this statement to select one of many blocks of code to be executed
+							</li>
+							<li>
+								<strong>switch statement</strong> - use this statement to select one of many blocks of code to be executed
+							</li>
+						</ul>
+					</p>
+					<h3>
+						If Statements
+					</h3>
+					<p>
+					If statments are used to check a comparison and then perform a section of code if the comparison evaulates to true.  The syntax for an if statement is:
+					</p>
+<pre class="prettyprint linenums">
+if(<em>comparison statement</em>) {
+	<em>//Perform code</em>
+}</pre>
+					<h3>
+						If Else Statements
+					</h3>
+					<p>
+					If Else statements are an extension of the if statement where there is a section of code to perform if the comparison evaluates to true.  Although, if the comparison evauluates to false there is a second section of code to be executed.
+					</p>
+<pre class="prettyprint linenums">
+if(<em>comparison statement</em>) {
+	<em>//Perform code if true</em>
+}
+else {
+	<em>//Perform code if false</em>
+}</pre>
+					<h3>
+						Else If Statements
+					</h3>
+					<p>
+					Else if statements work with the If and Else statements but allow for a multiple comparison checks before settling in the Else block.  Else if can be used once or more with a comparison block.
+					</p>
+<pre class="prettyprint linenums">
+if(<em>comparison statement</em>) {
+	<em>//Perform code if true</em>
+}
+else if (<em>comparison statement two</em>) {
+	<em>//Perform code if true</em>
+}
+else {
+	<em>//Perform code if false</em>
+}</pre>
+					<h3>
+						Switch Statments
+					</h3>
+					<p>
+					Swtich statements are slightly different then if statements.  Switch statements do not rely on a comparsion operation, but accept a value and then run through a list of potential values to perform actions for, and then if there is no match a default section of code can be run.
+					</p>
+<pre class="prettyprint linenums">
+switch(<em>value</em>) {
+	case <em>value1</em>:
+  		<em>//Perform code if equal</em>
+  		break;
+ 	case <em>value2</em>:
+  		<em>//Perform code if equal</em>
+  		break;
+  	case <em>value3</em>:
+  		<em>//Perform code if equal</em>
+  		break;
+  	default:
+  		<em>//Perform code if no matches</em>
+}</pre>
+				</section>
+				<section id="loops">
+					<div class="page-header">
+						<h1>
+						Loops
+						</h1>
+					</div>
+					<p>
+					Loops allow a programmer to repeatedly perform a section of code until a specific condition is met to break the cycle.  There are three basic types of loops
+						<ul>
+							<li>
+								<strong>While loop</strong>
+							</li>
+							<li>
+								<strong>Do while loop</strong>
+							</li>
+							<li>
+								<strong>For loop</strong>
+							</li>
+						</ul>
+					</p>
+					<h3>
+						While Loop
+					</h3>
+					<p>
+					A while loop is the simplest form of a loop in programming.  It has a single condition, and until the condition is no longer true it will run through the code inside the loop.
+					</p>
+<pre class="prettyprint linenums">
+while(<em>comparison statement is true</em>) {
+	<em>//Perform code</em>
+}</pre>
+					<h3>
+						Do While Loop
+					</h3>
+					<p>
+					The do while loop is similar to the while loop except it performs the loop code before performing the check.  It is essentially the same as if you flipped the while loop.
+					</p>
+<pre class="prettyprint linenums">
+do{
+	<em>//Perform code</em>
+}while(<em>comparison statement is true</em>)</pre>
+					<h3>
+						For Loop
+					</h3>
+					<p>
+					For loops are similar to while loops, but attempt to consolidate the initialization of a counter variable for how many times the loops should be run.
+					</p>
+					<p>
+					A for loop requires three statements to set it up. The counter initialize statement, the conditional to stop the loop, and the increment for counter after each time the loop is ran through.
+					</p>
+	  			  	<p>
+  			  		<span class="label label-info">Note</span> The conditional and increment can be set to to any valid operations or statements.
+  			  		</p>
+<pre class="prettyprint linenums">
+for(counter=val;counter&lt;limit;counter++) {
+	<em>//Perform code</em>
+}</pre>
+				<div class="alert alert-info">
+					<h4 class="alert-heading">Loops and Arrays</h4>
+					<p>
+					Loops are great for evaluating and using <a class="tip" rel="tooltip" title="See lesson 5 for more information">arrays</a>.  Using a for loop you can set it up to evaluate an array very easily.
+<pre class="prettyprint linenums">
+for(index=0;index&lt;myArray.index;counter++) {
+	sum += myArray[index];
+}</pre>
+					</p>
+				</div>
+				</section>
+				<section id="associative_arrays">
+					<div class="page-header">
+						<h1>
+						Associative Arrays
+						</h1>
+					</div>
+					<p>
+					Associative arrays are very similar to the standard arrays covered in lesson 5, but with one difference.  They use strings as the index instead of numbers, that way values in the array can be associated with a descriptive string instead.
+					</p>
+					<p>
+					Associative arrays are set up slightly different:
+<pre class="prettyprint linenums">
+var daysInMonth = new Array();
+daysInMonth["January"] = 31;
+daysInMonth["February"] = 28;
+daysInMonth["March"] = 31;
+...</pre>
+					</p>
+					<p>
+					Then when we want to access the days for a sepecific month we just need to enter the month as a string into as the index.  If we enter something like <code>daysInMonth["January"]</code> we will get <em>31</em> back.  Beyond that the array can be manipulated in a similar fashion to the standard arrays.
+					</p>
+				</section>
+				<section id="functions">
+					<div class="page-header">
+						<h1>
+						Functions
+						</h1>
+					</div>
+					<p>
+					Functions are a small or large piece of executable code which can be ran by calling the shorthand name for the function.  Functions can take parameters to modify the processing inside the code block, and also can have a return value which comes out at the end of the function.  An outline of a function can look like:
+<pre class="prettyprint linenums">
+function <em>functionname</em>(<em>var1,var2,...,varX</em>) {
+	<em>//Code to execute</em>
+	<em>(optional)</em> return <em>val</em>;
+}</pre>
+					</p>
+					<p>
+					Using that outline we can create our own simple function:
+<pre class="prettyprint linenums">
+function hello(name) {
+	return "Hello " + name;
+}</pre>
+					Anytime we would need a string to say hello we could use our function like <code>result = hello("Mike")</code>.  Then when we use the variable <code>result</code> it will contain <code>"Hello Mike"</code>.	
+					</p>
+					<p>
+					<span class="label label-info">Note</span> Functions should only accomplish a single task and can be as complicated or simple as is necessary to complete it.
+					</p>
+				</section>			
+				<section id="classes">
+					<div class="page-header">
+						<h1>
+						Classes
+						</h1>
+					</div>
+					<p>
+					Classes are a structure which contain variables and functions which are related in some way.  An example of a class is:
+<pre class="prettyprint linenums">
+function Person(firstName,lastName,age) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.age = age;
+
+	this.firstAndLastName = function() {
+        return this.firstName + " " + this.lastName;
+    }
+}</pre>
+					This can look similar to a function, but by having having the variables defined with <code>this.</code> it will allow us to access the variables.  When using a class we have to apply it to a variable with the <code>new</code> keyword.  If we want to make a new person it will look like:
+					</p>
+					<p>
+					<code>myVariable = new Person("John", "Smith", 34)</code>
+					</p>
+					<p>
+					Once that is defined we can access the variables and functions of the class extremely easily:
+<pre class="prettyprint linenums">
+myVariable.firstName 		//returns "John"
+myVariable.firstName 		//returns "Smith"
+myVariable.age 			//returns 34
+myVariable.firstAndLastName()	//returns "John Smith"
+</pre>
+					</p>
+					<p>
+					When defining variables inside a class, instead of <code>this.</code> we can just use <code>var </code>.  That means the variable will be called <em>private</em> and only accessible to functions inside of the class.
+					</p>
+				</section>
+				<section id="moreinfo">
+					<div class="page-header">
+						<h1>
+						More Information
+						</h1>
+					</div>
+					<div class="alert alert-info">
+						<a class="close" data-dismiss="alert">&times;</a>
+						<h4 class="alert-heading">Check out The Sandbox</h4>
+						<p>
+							If you have made it through all the advanced topics, feel free to head over to the <a href="sandbox.html">sandbox</a> to try out some of the new things from this page.
+						</p>
+						<p>
+						<span class="label label-info">Note</span> Since the console only allows you to input a single line at a time you may need to enter multiple commands on one line.  To enter multiple commands be sure to end each command with a <code>;</code> like <code>x = 3+5;</code>.  This will treat all the code segments separated by the semi-colons as separate executable lines, even if they are submitted as a single line.
+						</p>
+					</div>
+					<p>
+					The language we have been covering is called Javascript and if you would like to find more info about this language and ways to use it, I suggest you head over to the <a href="http://www.w3schools.com/js/" target="_blank">w3school site</a>.  They have lots of information and examples which cover a huge range of topics, and can be very helpful in clarifying some of the topics.
+					</p>
+					<p>
+					There are many other resources around the web to help you learn to code and learn more a javascript too.  A search on google should return many fantastic results to help you delve deeper into programming.  Some other resources are:
+						<ul>
+							<li><a href="http://www.webmonkey.com/2010/02/javascript_tutorial/" target="_blank">Webmonkey</a></li>
+							<li><a href="https://developer.mozilla.org/en/A_re-introduction_to_JavaScript" target="_blank">Mozilla Developer Network</a></li>
+							<li><a href="http://en.wikibooks.org/wiki/JavaScript/Introduction" target="_blank">Wikibooks</a></li>
+							<li><a href="http://www.web-source.net/javascript_tutorial/" target="_blank">Web Source</a></li>
+						</ul> 
+					</p>
+					<h2>
+						Other Languages
+					</h2>
+					<p>
+						There are many, many other lanuages to learn which can suite different purposes.  Some of the more prominent languages used for development today are:
+					</p>
+					<h3><a href="http://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">Java</a></h3>
+					<p>
+						Java is probably the most popular language in the world right now and is especially used in academic and research circles.  It requires code to be <a class="term-top" rel="popover" data-content="In order for the code to be recognized by the computer's CPU, it must be converted from source code (a high-level language) into machine code (a low-level language). This process is referred to as compiling the code." data-original-title="Compile">compiled</a> and then executed.  Java requires the Java Runtime Environment to be installed on computers which need to run java programs.  Since Java uses its own runtime environment, it allows the code to run the same on any operating system.  Unfortunately, executing the program through the Java Runtime environment can make the program run pretty slow depending on what operations it is performing.
+					</p>
+					<h3><a href="http://en.wikipedia.org/wiki/C%2B%2B" target="_blank">C/C++</a></h3>
+					<p>
+						These are the fastest, lightest modern compiled languages available right now.  It executes incredibly fast, and programs can be written with minimal extra content included.  This makes it an ideal choice for computers which have very restricted hardware.  The only downside of using these languages is that because they are so light weight, lots of functions are not particularly programmer friendly, and require a lot of extra work.
+					</p>
+					<h3><a href="http://en.wikipedia.org/wiki/C_Sharp_(programming_language)" target="_blank">C#</a></h3>
+					<p>
+						Developed by Microsoft, C# is supposed to be the next evolution of C++.  It does a lot more work for the programmer, making things easier and quicker to develop.  These bonuses come with a cost, it requires the .NET framework to execute any applications.  The .NET framework is installed on any Windows computer, but may require an update depending on the program.  Even though it is much easier to program with, the .NET framework makes applications run slightly slower when compared to C++ applications, and restricts the program's platforms to Windows PCs.
+					</p>
+					<h3><a href="http://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a></h3>
+					<p>
+						Python is a scripting langauge based on C++.  This means that it does not require to be compiled.  A python interpreter must be installed on a PC needing to run phython scripts, but then the script can be immediately executed.  Python also has really simple structures and uses, so that writing programs can be extremely quick.  It is a nice option for small programs because it executes relatively fast for non-compiled applications and is very quick and easy to write.
+					</p>
+					<h3><a href="http://en.wikipedia.org/wiki/Ruby_(programming_language)" target="_blank">Ruby</a></h3>
+					<p>
+						Ruby is very similar to Python but slightly slower.  It uses slightly different programming <a class="term-top" rel="popover" data-content="In computer science, the syntax of a programming language is the set of rules that define the combinations of symbols that are considered to be correctly structured programs in that language." data-original-title="Syntax">syntax</a>, but does not require compilation either.  Ruby is a relatively new language, but has a huge development community.  This means that Ruby has lots of documentation available to learn and resolve problems, as well as lots of community developed, <a class="term-top" rel="popover" data-content="Is computer software that is available in source code form: the source code and certain other rights normally reserved for copyright holders are provided under a free software license that permits users to study, change, improve and at times also to distribute the software." data-original-title="Open Source">open source</a>, plugins to use which makes developing applications extremely fast.
+					</syntax>
+				</section>
+
+			</div>
+		</div>	
+		<div class="footer">
+    		<p class="center_p"> &copy; Garrett Speager 2012 </p>
+  		</div>
+	</body>
+	<script src="javascript/jquery-1.7.min.js" type="text/javascript"></script>
+	<script src="javascript/bootstrap.min.js" type="text/javascript"></script>
+	<script src="plugins/google-code-prettify/src/prettify.js" type="text/javascript"></script>
+	<script src="javascript/application.js" type="text/javascript"></script>
+</html>

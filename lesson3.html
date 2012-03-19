@@ -1,0 +1,336 @@
+<html>
+	<head>
+		<title>Code.Edu - Comparisons</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/application.css">
+		<link rel="icon" type="image/ico"  href="favicon.ico">
+	</head>
+	<body>
+		<div class="container">
+			<div class="navbar navbar-fixed-top">
+  				<div class="navbar-inner">
+    				<div class="container">
+    					<div>
+    						<a href="index.html" class="brand">Code.Edu</a>
+    					</div>
+    					<ul class="nav">
+    						<li><a href="lesson1.html">Lesson 1</a></li>
+    						<li><a href="lesson2.html">Lesson 2</a></li>
+    						<li class="active"><a href="lesson3.html">Lesson 3</a></li>
+    						<li><a href="lesson4.html">Lesson 4</a></li>
+    						<li><a href="lesson5.html">Lesson 5</a></li>
+    						<li><a href="advanced.html">Advanced Topics</a></li>
+    					</ul>
+    					<ul class="nav pull-right">
+    						<li class="divider-vertical"></li>
+    						<li><a href="sandbox.html">Sandbox</a></li>
+    						<li><a href="about.html">About</a></li>
+    					</ul>
+    				</div>
+				</div>
+			</div>
+			<pre id="next_lesson" class="solution">lesson4.html</pre>
+			<div class="content">
+				<div class="main-page-header">
+					<h1>Lesson 3: Comparison Operators</h1>
+				</div>
+				<div class="row">
+					<div class="span7">
+						<h3>Material</h3>
+						Comparison operators work much like the mathematical operators from lesson 1 except they return a result called a <a class="term-bottom" rel="popover" data-content="In computer science, a binary variable having two possible values called true and false." data-original-title="Boolean">boolean</a>.  These <a class="term-bottom" rel="popover" data-content="In computer science a relational operator is a programming language construct or operator that tests some kind of relation between two entities." data-original-title="Comparison Operator">comparison operator</a> results can either be true or false, which allows a programmer to make decisions.  There are many useful operators to know, and they are all used to determine the equality or difference between values.
+						<hr>
+						<div id="console" class="well console_inactive"></div>
+						<div>
+							<ul class="rlo_pager">
+								<li class="previous">
+									<a class="btn btn-large btn-primary rlo_pager_button_width" href="lesson2.html"> 
+										<i class="icon-chevron-left icon-white" style="float:left;"></i> 
+										Previous Lesson 
+									</a>
+								</li>
+								<li>
+									<a class="btn" data-toggle="modal" href="#consoleHelp"><i class="icon-info-sign"></i> Console Help</a>
+								</li>
+								<li class="next">
+									<a class="btn btn-large btn-primary rlo_pager_button_width" href="lesson4.html"> 
+										Next Lesson 
+										<i class="icon-chevron-right icon-white" style="float:right;"></i> 
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="span5">
+						<div id="lessons" class="accordion">
+						   <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title1" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 1: Equality
+				                </span>
+				              </div>
+				              <div id="1" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  One of the most important comparison operators is to find out is something is equal to a specific value.  The equality operator is <code>==</code> and will return <em>true</em> if both values are equal and <em>false</em> otherwise.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>compare two numbers with the equality operator</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint1">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint1" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  			<code>3 == 3</code>
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer1_enter" class="solution">^\s*(?:-[0-9]+|[0-9]+)\s*==\s*(?:-[0-9]+|[0-9]+)</pre>
+				                <pre id="answer1_out" class="solution">boolean</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title2" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 2: Greater Than, Less Than
+				                </span>
+				              </div>
+				              <div id="2" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  When using comparison operators, they compare from left to right.  So just like in elementry school we can if a value is greater <code>></code> or less <code><</code> than another value.
+				                  </p>
+				                  <p>
+									<span class="label label-info">Note</span> these check that the values are exclusively larger than or smaller than the value being checked against.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>use a greater or less than operator to perform a comparison with two numbers</strong>.
+				                  </p>
+  				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint2">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint2" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>2 < 4</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer2_enter" class="solution">^\s*(?:-[0-9]+|[0-9]+)\s*[<>]\s*(?:-[0-9]+|[0-9]+)</pre>
+				                <pre id="answer2_out" class="solution">boolean</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title3" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 3: Or Equal To
+				                </span>
+				              </div>
+				              <div id="3" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  Sometimes when checking values we want to ensure the value is equal or larger (or smaller) and not just strictly larger.  This can be done by using the <code>>=</code> operator to check if it is greater than or equal to.  The <code><=</code> operator checks if the value is less than or equal to.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>use the less than or equal to or greater than or equal to operator with two numbers</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint3">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint3" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>3 >= 2</code>
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer3_enter" class="solution">^\s*(?:-[0-9]+|[0-9]+)\s*(?:>=|<=)\s*(?:-[0-9]+|[0-9]+)</pre>
+				                <pre id="answer3_out" class="solution">boolean</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title4" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 4: Not Equal
+				                </span>
+				              </div>
+				              <div id="4" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  	When comparing values sometimes it is useful to simply check that a value is not equal to a specific value.  We can do this with the not equals operator <code>!=</code>. If the two values are equal it will return false and true otherwise.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>use the not equal value with two numbers</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint4">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint4" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>2 != 3</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer4_enter" class="solution">^\s*(?:-[0-9]+|[0-9]+)\s*!=\s*(?:-[0-9]+|[0-9]+)</pre>
+				                <pre id="answer4_out" class="solution">boolean</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title5" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 5: Not Operator
+				                </span>
+				              </div>
+				              <div id="5" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  We can also make a comparison return the opposite, true if it was false false if it was true.  This can be done like <code>!(<em>comparison</em>)</code>.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>use the not operator with a greater than comparison</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint5">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint5" class="collapse">
+								  		 Try entering something like:
+								  		 <p>
+								  		 	<code>!(3 > 2)</code> 
+								  		 </p>
+								  	</div>
+								  </div>
+				                </div>
+				               	<pre id="answer5_enter" class="solution">^\s*!\s*\(\s*(?:-[0-9]+|[0-9]+)\s*>\s*(?:-[0-9]+|[0-9]+)\s*\)</pre>
+				                <pre id="answer5_out" class="solution">boolean</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title6" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 6: AND Operator
+				                </span>
+				              </div>
+				              <div id="6" class="accordion-body collapse">
+				                <div class="accordion-inner">
+				                  <p>
+				                  The AND operator allows a programmer to combine two comparisons and return a single result when they both return true.  Using the <code>&&</code> operator between two comparisons will return the combined result.
+				                  </p>
+  				                  <p>
+  				                  <span class="label label-info">Note</span> AND returns true when both comparisons are true and false otherwise.
+				                  </p>
+				                  <p>
+				                  	<span class="label label-important">Action</span> In the console <strong>use AND with two comparisons</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint6">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint6" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  		<code>2 > 3 && 3 < 4</code> 
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer6_enter" class="solution">^\s*(?:-[0-9]+|[0-9]+)\s*(?:>=|<=|==|!=|<|>)\s*(?:-[0-9]+|[0-9]+)\s*&&\s*(?:-[0-9]+|[0-9]+)\s*(?:>=|<=|==|!=|<|>)\s*(?:-[0-9]+|[0-9]+)</pre>
+				                <pre id="answer6_out" class="solution">boolean</pre>
+				              </div>
+				            </div>
+				            <div class="accordion-group">
+				              <div class="accordion-heading">
+				                <span id="title7" class="accordion-toggle sublesson_title" data-toggle="collapse" data-parent="#lessons">
+				                  Part 7: OR operator
+				                </span>
+				              </div>
+				              <div id="7" class="accordion-body collapse">
+				                <div id="last_inner" class="accordion-inner">
+				                  <p>
+				                  The OR operator works slightly different the AND operator.  By using the <code>||</code> operator we can check if either of the comparisons are true.  So it will return false only wen both comparisons are false and true otherwise.
+				                  </p>
+				                  <p>
+				                  <span class="label label-important">Action</span> In the console <strong>use the OR operator with two comparisons.</strong>.
+				                  </p>
+				                  <div class="alert alert-warning">
+				        		  	<button class="btn btn-warning" data-toggle="collapse" data-target="#hint7">
+	  							  		Hint <i class="icon-question-sign icon-white"></i>
+								  	</button>
+								  	<div id="hint7" class="collapse"> 
+								  		Try entering something like:
+								  		<p>
+								  			<code>2 > 3 || 3 < 4</code> 
+								  		</p>
+								  	</div>
+								  </div>
+				                </div>
+				                <pre id="answer7_enter" class="solution">^\s*(?:-[0-9]+|[0-9]+)\s*(?:>=|<=|==|!=|<|>)\s*(?:-[0-9]+|[0-9]+)\s*\|\|\s*(?:-[0-9]+|[0-9]+)\s*(?:>=|<=|==|!=|<|>)\s*(?:-[0-9]+|[0-9]+)</pre>
+				                <pre id="answer7_out" class="solution">boolean</pre>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="footer">
+    		<p class="center_p"> &copy; Garrett Speager 2012 </p>
+  		</div>
+  		<div class="modal hide" id="consoleHelp">
+  			<div class="modal-header">
+  			  	<a class="close" data-dismiss="modal">&times;</a>
+  			  	<h3>How to Use the Console</h3>
+  			</div>
+  			<div class="modal-body console_help_body">
+  			  	<h4>Enable the Console</h4>
+  			  	<p>
+  			  		To enable the console you must first click on the grey console area.  You can tell that the console is enabled when the border around it gets darker and thicker.  The cursor and line input marker will also get darker to let you know you can type.
+  			  	</p>
+  			  	<p>
+  			  		<span class="label label-info">Note</span> clicking outside the console will disable it.
+  			  	</p>
+  			  	<h4>Using the console</h4>
+  			  	<p>
+  			  		Once the console is enabled you will be able to type into the input line.  This allows you to enter commands and have them processed. If your command is executed successfully the result will:
+  			  		<div class="alert alert-info">
+						>> look like this
+					</div>
+					If your input results in an error it will:
+					<div class="alert alert-danger">
+						look like this
+					</div>
+				</p>
+				<h4>Special Keys</h4>
+  			  	<p>
+  			  		While the console will register most character keys there are a few keys that perform special actions.
+  			  		<ul>
+  			  			<li><span class="label">Enter</span> submits the current input line</li>
+  			  			<li><span class="label">Backspace</span> deletes the character to the left of the cursor</li>
+  			  			<li><span class="label">Delete</span> deletes the character in the cursor</li>
+  			  			<li><span class="label">Left Arrow</span> moves the cursor one character to the left</li>
+  			  			<li><span class="label">Right Arrow</span> moves the cursor one character to the right</li>
+  			  			<li><span class="label">Up Arrow</span> cycles backwards through previously used commands</li>
+  			  			<li><span class="label">Down Arrow</span> cycles forward through previously used commands</li>
+  			  		<ul>
+				</p>
+  			</div>
+  			<div class="modal-footer">
+  			  	<a href="#" class="btn btn-primary" data-dismiss="modal">Close</a>
+  			</div>
+		</div>
+	</body>
+	<script src="javascript/jquery-1.7.min.js" type="text/javascript"></script>
+	<script src="javascript/bootstrap.min.js" type="text/javascript"></script>
+	<script src="javascript/application.js" type="text/javascript"></script>
+</html>
