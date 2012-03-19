@@ -106,6 +106,13 @@ body {
 .subnav .nav > .active > a .caret, .subnav .nav > .active > a:hover .caret {
     border-top-color: #777777;
 }
+.btn-jumbo {
+    border-radius: 6px 6px 6px 6px;
+    font-size: 20px;
+    font-weight: normal;
+    margin-right: 10px;
+    padding: 14px 24px;
+}
 /*---APP STYLES---*/
 #console {
   height: 250px;
