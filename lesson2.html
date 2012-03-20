@@ -225,7 +225,13 @@
 				              <div id="6" class="accordion-body collapse">
 				                <div class="accordion-inner">
 				                  <p>
-				                  Another useful function is <code>.replace()</code>.  It takes two <a class="term-top" rel="popover" data-content="In computer science, a reference or value that is passed to a function, procedure, subroutine, command, or program." data-original-title="Parameter">parameters</a>.  In this case you can use it as <code>.replace("string to replace", "string to replace it with")</code>.
+				                  Another useful function is <code>.replace()</code>.  It takes two <a class="term-top" rel="popover" data-content="In computer science, a reference or value that is passed to a function, procedure, subroutine, command, or program." data-original-title="Parameter">parameters</a>, but has two different flavors.  The first and simplest, accepts both parameters as strings, in this case you can use it like <code>.replace("old string", "new string")</code>.  This will replace the first occurence of "old string" with "new string".
+				                  </p>
+				                  <p>
+				                  The second use of this function is passing a <a class="term-top" rel="popover" data-content="In computing, a regular expression provides a concise and flexible means to match (specify and recognize) strings of text, such as particular characters, words, or patterns of characters. Common abbreviations for "regular expression" include regex and regexp." data-original-title="Regular Expression">regular expression</a> as the first parameter.  In the most basic sense you can use a regular expression by replacing the quotation marks with forward slashes like <code>.replace(/old string/, "new string")</code>.  There are special characters that will make regular expressions behave funny such as '.','?','+', if attempting to match these characters, you should consider reading up on regular expressions (which are too complicated for these lessons).  Like the string version, this will match the first occurance of the regular expression and replace it with the new string.
+				                  </p>
+				                  <p>
+				                  <span class="label label-info">Note</span> if you end a regular expression with 'g' such as <code>/hello/g</code> then it will replace all matches of the regular expression.
 				                  </p>
 				                  <p>
 				                  <span class="label label-important">Action</span> In the console <strong>use replace to modify a string</strong>.
